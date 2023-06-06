@@ -1,0 +1,24 @@
+<?php 
+  session_start(); 
+
+  if (empty($_SESSION['username'])) {
+  	header('location: 5.login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: 5.login.php"); 
+  }
+?>
+
+for logout:
+
+<?php if (isset($_SESSION["username"])): ?>
+	<P> <a href="index.php?logout='1'"> Logout </a>
+<?php endif ?>
+
+if(isset($_GET['logout'])){
+	session_destroy();
+	unset($_SESSION['username']);
+	header('location: index.php');
+}
