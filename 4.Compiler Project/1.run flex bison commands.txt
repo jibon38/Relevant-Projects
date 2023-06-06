@@ -1,0 +1,14 @@
+
+Run: flex file, file.l
+
+> flex file.l
+> gcc lex.yy.c -o result
+> result.exe
+
+
+Run: bison file, file.y and file.l
+
+> flex file.l
+> bison -d file.y
+> gcc lex.yy.c file.tab.c -o result
+> result.exe

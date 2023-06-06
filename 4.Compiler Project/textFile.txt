@@ -1,0 +1,86 @@
+#include <program.h>
+void main()
+{
+	int x, y, z, add, sub, mult;
+	float div;
+
+	x = 15; 
+	cout << x << endl;
+
+	y = 20;
+	cout << y << endl;
+
+	z = 25;
+	cout << z << endl;
+
+	add = 15 + 20 ;
+	cout << add << endl;
+
+	sub = 20 - 15 ;
+	cout << sub << endl;
+
+	mult = 15 * 25 ;
+	cout << mult << endl;
+
+	div = 10.5 / 0 ;
+	cout << div << endl;
+
+	int a = 11, b = 22, c = 33;
+	cout << c << endl;
+
+	int ans;
+	ans = ( 5 < 10 ) ? 10 : 5 ;
+	cout << ans << endl;
+
+	char name = "Jibon";
+
+	if(10 < 15)
+	{
+		cout << 15 << endl;
+	}
+
+	int mark = 70;
+	if(mark>=80)
+	{
+		cout << 80 << endl;
+	}
+	else if(mark>=60 && mark<=79)
+	{
+		cout << 75 << endl;
+	}
+	else
+	{
+		cout << 65 << endl;
+	}
+
+	int loop=1;
+	do
+	{
+		int m,n,o;
+		char p;
+		m = 37, n = 38;
+		cout << n << endl;
+	}
+	while(loop==1);
+
+	while(mark<=80)
+	{
+		int newMark = mark + 10;
+		if(newMark >= 80){
+			cout << 80 << endl;
+		}
+		else{
+			newMark++;
+		}
+	}
+
+	for(int x=1; x<=7; x++)
+	{
+		cout << x << endl;
+	}
+
+	bound val in 5...10
+	{
+		cout << val << endl;
+	}
+}
