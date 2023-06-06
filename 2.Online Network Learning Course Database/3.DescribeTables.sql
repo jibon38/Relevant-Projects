@@ -1,0 +1,7 @@
+DESCRIBE Admin;
+DESCRIBE Students;
+DESCRIBE Courses;
+DESCRIBE Payment;
+DESCRIBE Semesters;
+DESCRIBE Modules;
+DESCRIBE Exam;
