@@ -1,0 +1,25 @@
+$query    = "INSERT into users (username, email, password) VALUES ('$username', '$email', '" . md5($password) . "')";
+        $result   = mysqli_query($con, $query);
+
+        if ($result) {
+        	$_SESSION['username'] = $username;
+        	header("Location: 0.index.php");
+        }
+        else{
+        	echo '<script>alert("Sorry! Something went wrong..")</script>';
+        }
+
+
+    	$query    = "SELECT * FROM `users` WHERE username='$username' AND password='" . md5($password) . "'";
+        $result = mysqli_query($con, $query) or die(mysql_error());
+        $rows = mysqli_num_rows($result);
+
+        if ($rows == 1) {
+            $_SESSION['username'] = $username;
+            // Redirect to user dashboard page
+            header("Location: 0.index.php");
+        }
+        else{
+        	echo '<script>alert("Invalid username/password combination.")</script>';
+        }
+    }

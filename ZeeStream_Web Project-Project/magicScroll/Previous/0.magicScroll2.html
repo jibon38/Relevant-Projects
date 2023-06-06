@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		.innerWrapper
+    {
+        float: left;
+        margin-right:-32767px;
+    }
+    .outerWrapper
+    {
+        width: 780px;
+        height: 180px;
+        overflow: hidden;
+    }
+	</style>
+
+</head>
+<body>
+
+	jQuery scrollRight?
+$(".leftArrow").click(function () { 
+  $(".innerWrapper").animate({scrollLeft: 250}, 800);
+});
+ 
+<input type='button' class='leftArrow' value='left'>
+<input type='button' class='rightArrow' value='right'>
+ 
+<div class='outerWrapper'>
+   <div class='innerWrapper'>
+         // some content
+   </div>
+</div>
+ 
+
+ 
+$(".leftArrow").click(function () { 
+  var leftPos = $('.innerWrapper').scrollLeft();
+  $(".innerWrapper").animate({scrollLeft: leftPos - 200}, 800);
+});
+ 
+$(".rightArrow").click(function () { 
+  var leftPos = $('.innerWrapper').scrollLeft();
+  $(".innerWrapper").animate({scrollLeft: leftPos + 200}, 800);
+});
+ 
+<script type="text/javascript">
+        $(window).load(function() {
+            $("div#makeMeScrollable").smoothDivScroll({ 
+                autoScroll: "onstart" , 
+                autoScrollDirection: "backandforth", 
+                autoScrollStep: 1, 
+                autoScrollInterval: 15, 
+                startAtElementId: "startAtMe", 
+                visibleHotSpots: "always"
+            });
+        });
+    </script>
+ 
+ 
+<div id="makeMeScrollable">
+    <div class="scrollingHotSpotLeft"></div>
+    <div class="scrollingHotSpotRight"></div>
+    <div class="scrollWrapper">
+        <div class="scrollableArea">
+            <img src="images/demo/field.jpg" alt="Demo image" />
+            <img src="images/demo/gnome.jpg" alt="Demo image" />
+            <img src="images/demo/pencils.jpg" alt="Demo image" />
+            <img src="images/demo/golf.jpg" alt="Demo image" id="startAtMe" />
+            <img src="images/demo/river.jpg" alt="Demo image" />
+            <img src="images/demo/train.jpg" alt="Demo image" />
+            <img src="images/demo/leaf.jpg" alt="Demo image" />
+            <img src="images/demo/dog.jpg" alt="Demo image" />
+        </div>
+    </div>
+</div
+
+
+</body>
+</html>
